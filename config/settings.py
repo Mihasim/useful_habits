@@ -168,6 +168,10 @@ CELERY_BEAT_SCHEDULE = {
         'task': 'habits.tasks.check_date',  # Путь к задаче
         'schedule': timedelta(days=1),  # Расписание выполнения задачи
     },
+    'test': {
+        'task': 'habits.tasks.test',  # Путь к задаче
+        'schedule': timedelta(seconds=10),  # Расписание выполнения задачи
+    },
 }
 
 CORS_ALLOW_ALL_ORIGINS = True

@@ -3,7 +3,7 @@ from datetime import datetime
 from celery import shared_task
 
 from habits.models import Habit
-from habits.services import send_message
+from habits.services import send_message, check_chat_id
 
 
 @shared_task
@@ -36,3 +36,8 @@ def check_date():
             if habit.periodicity == 'once_a_week' and datetime.now().weekday() == 1:
                 send_message()
 
+
+@shared_task
+def test():
+    check_chat_id()
+    send_message()
