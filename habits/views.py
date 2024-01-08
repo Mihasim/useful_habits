@@ -52,6 +52,7 @@ class PublicHabitListAPIView(generics.ListAPIView):
         queryset = Habit.objects.filter(sign_of_publicity=True)
         return queryset
 
+
 class HabitRetrieveAPIView(generics.RetrieveAPIView):
     """
     контроллер вывода одной привычки
