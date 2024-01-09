@@ -1,5 +1,3 @@
-from datetime import datetime
-
 from rest_framework import status
 from rest_framework.test import APITestCase
 
@@ -147,9 +145,9 @@ class HabitsRetrieveViewTestCase(APITestCase):
         self.assertEqual(
             response.json(),
 
-                {'id': self.habit.id, 'place': 'где-то', 'time': '15:27:57.784614', 'action': 'поесть',
-                 'sign_of_a_pleasant_habit': False, 'periodicity': 'daily', 'award': 'вкусняшка',
-                 'time_to_complete': 120, 'sign_of_publicity': False, 'user': self.user.id, 'related_habit': None}
+            {'id': self.habit.id, 'place': 'где-то', 'time': '15:27:57.784614', 'action': 'поесть',
+             'sign_of_a_pleasant_habit': False, 'periodicity': 'daily', 'award': 'вкусняшка',
+             'time_to_complete': 120, 'sign_of_publicity': False, 'user': self.user.id, 'related_habit': None}
         )
 
 
@@ -201,9 +199,9 @@ class HabitsUpdateViewTestCase(APITestCase):
         self.assertEqual(
             response.json(),
 
-                {'id': self.habit.id, 'place': 'где-то1', 'time': '15:27:57.784614', 'action': 'поесть1',
-                 'sign_of_a_pleasant_habit': False, 'periodicity': 'daily', 'award': 'вкусняшка',
-                 'time_to_complete': 120, 'sign_of_publicity': False, 'user': self.user.id, 'related_habit': None}
+            {'id': self.habit.id, 'place': 'где-то1', 'time': '15:27:57.784614', 'action': 'поесть1',
+             'sign_of_a_pleasant_habit': False, 'periodicity': 'daily', 'award': 'вкусняшка',
+             'time_to_complete': 120, 'sign_of_publicity': False, 'user': self.user.id, 'related_habit': None}
         )
 
 
@@ -243,4 +241,3 @@ class HabitsDestroyTestCase(APITestCase):
         self.assertEqual(
             Habit.objects.count(), 0
         )
-

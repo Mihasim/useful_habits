@@ -30,7 +30,7 @@ class Habit(models.Model):
     action = models.TextField(verbose_name='Действие')
     sign_of_a_pleasant_habit = models.BooleanField(verbose_name='Признак приятной привычки', default=False)
     related_habit = models.ForeignKey('self', on_delete=models.CASCADE, **NULLABLE, verbose_name='связанная привычка')
-    periodicity = models.CharField(max_length=20, verbose_name='Периодичность',  choices=periodicity) #  Нельзя выполнять привычку реже, чем 1 раз в 7 дней.
+    periodicity = models.CharField(max_length=20, verbose_name='Периодичность',  choices=periodicity)  # Нельзя выполнять привычку реже, чем 1 раз в 7 дней.
     award = models.TextField(verbose_name='Вознаграждение', **NULLABLE)
     time_to_complete = models.PositiveIntegerField(verbose_name='Время на выполнение')
     sign_of_publicity = models.BooleanField(verbose_name="Признак публичности", default=False)

@@ -27,7 +27,7 @@ class HabitListAPIView(generics.ListAPIView):
     """
     serializer_class = HabitSerializer
     queryset = Habit.objects.all()
-    pagination_class = HabitsPaginator  #  Пагинация вывод 5 привычек на страницу
+    pagination_class = HabitsPaginator  # Пагинация вывод 5 привычек на страницу
 
     def get_queryset(self):
         """
@@ -43,7 +43,7 @@ class PublicHabitListAPIView(generics.ListAPIView):
     """
     serializer_class = HabitSerializer
     queryset = Habit.objects.all()
-    pagination_class = HabitsPaginator  #  Пагинация вывод 5 привычек на страницу
+    pagination_class = HabitsPaginator  # Пагинация вывод 5 привычек на страницу
 
     def get_queryset(self):
         """
@@ -59,8 +59,6 @@ class HabitRetrieveAPIView(generics.RetrieveAPIView):
     """
     serializer_class = HabitSerializer
     queryset = Habit.objects.all()
-
-
 
 
 class HabitUpdateAPIView(generics.UpdateAPIView):

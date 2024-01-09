@@ -1,9 +1,6 @@
-import datetime
-
 from rest_framework import status
 from rest_framework.test import APITestCase
 
-from habits.models import Habit
 from users.models import User
 
 
@@ -57,6 +54,7 @@ class UsersViewTestCase(APITestCase):
         self.assertEqual(
             response.status_code,
             status.HTTP_200_OK)
+
 
 class UsersRetrieveViewTestCase(APITestCase):
     def setUp(self) -> None:
